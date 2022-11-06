@@ -1,0 +1,14 @@
+import {createContext, useContext, useReducer} from "react";
+
+//데이터 레이어 생성
+export const StateContext = createContext();
+
+// 앱을 래핑하고 데이터 레이어를 제공
+export const StateProvider = ({ reducer, initialState, children}) => (
+    <StateContext.Provider value={useReducer(reducer, initialState)}>
+        {children}
+    </StateContext.Provider>
+);
+
+// 데이터 레이어로부터 정보를 가져오는 메소드
+export const useStateValue = () => useContext(StateContext);

@@ -1,0 +1,24 @@
+.home {
+    display: flex;
+    justify-content: center;
+
+    /* 왼쪽 여백과 오른쪽 여백을 똑같이 맞추기, 깔끔하게 보이려면 그렇게 하는게 좋음*/
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1500px; /* 최대 넓이 설정 (안해줘도 되고 더 넓게 해줘도 됨)*/
+}
+
+.home_row {
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.home_image {
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));  /* 그라데이션 */
+}

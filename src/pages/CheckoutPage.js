@@ -15,13 +15,10 @@ function CheckoutPage() {
                      alt=""/>
 
                 <div>
-                    <h2 className="checkout_title">  장바구니입니다 </h2>
+                    <h2 className="checkout_title"> {user?.email}  장바구니입니다 </h2>
                     {basket.map(item => (
                         <CheckoutProduct id={item.id} title={item.title} image={item.image} price={item.price} rating={item.rating}/>
                     ))}
-                    <CheckoutProduct/>
-                    <CheckoutProduct/>
-                    <CheckoutProduct/>
 
                 </div>
             </div>
